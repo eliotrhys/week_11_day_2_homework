@@ -23,14 +23,14 @@ describe("Enclosure", function(){
     assert.strictEqual(the_park.dinoCount(), 1);
   })
 
-  // it("can remove type", function(){
-  //   the_park.addDinosaur(velociraptor);
-  //   the_park.addDinosaur(velociraptor2);
-  //   the_park.addDinosaur(velociraptor3);
-  //   the_park.addDinosaur(tyrannosaurus_rex);
-  //   the_park.removeType("Velociraptor");
-  //   assert.strictEqual(the_park.dinoCount(), 1);
-  // })
+  it("can remove type", function(){
+    the_park.addDinosaur(velociraptor);
+    the_park.addDinosaur(velociraptor2);
+    the_park.addDinosaur(velociraptor3);
+    the_park.addDinosaur(tyrannosaurus_rex);
+    the_park.removeByType("Velociraptor");
+    assert.strictEqual(the_park.dinoCount(), 1);
+  })
 
   it("can get offspring count", function(){
     the_park.addDinosaur(velociraptor);

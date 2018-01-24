@@ -19,6 +19,10 @@ Enclosure.prototype.addDinosaur = function(dinosaur){
 //   }
 // }
 
+Enclosure.prototype.removeByType = function(type){
+  this.paddock = this.paddock.filter(dino => dino.type !== type);
+}
+
 Enclosure.prototype.getOffspringCount = function(){
   var dinos = [];
   for (dino of this.paddock){
